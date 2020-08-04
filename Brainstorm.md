@@ -1,62 +1,34 @@
+# E-Learning Game: Richtige Ernährung, Vorteile von gesundem Essen als Side Scroller RPG Game (2D)
 
-#### Food Game, Richtige Ernährung, Vorteile von gesundem Essen
+### Idee:
 
-+ Side Scroller Game (2D)
++ Man spielt als Mensch des alltäglichen Leben und isst 3 Mahlzeiten mit einer vorgegebenen Kcal Anzahl
++ Sobald man schlafen geht startet das RPG-Spiel im Traum des Spielers
 
-+ Makronährstoffe: KCAL, Proteine, Fette, Kohlenhydrate
+### Features:
 
++ Makronährstoffe: Kcal, Kohlenhydrate, Proteine, Fette
 + Mikronährstoffe: Vitamine
 
-Gesundes: Gemüse, Obst, langkettige Kohlenhydrate (Reis, Kartoffeln)
++ Lebensmittel:
+  + Gesundes: Gemüse, Obst, Reis, Kartoffeln
+  + Ungesundes: Schokolade (erhöht Glück -> zuviel erniedrigt aber andere Attribute)
 
-Ungesundes: Burger, Schokolade (erhöht Glück -> zuviel erniedrigt aber andere Attribute)
++ mögliche Attribute: 
+  + Power: alle Attribute im Verhältnis zusammen gerechnet
+  + ATK => Angriffskraft
+  + DEF => Verteidigung
+  + SPD => Angriffgeschwindigkeit 
+  + HP => Lebenskraft
+  + CRIT => Kritische Chance
 
-mögliche Attribute: Fitness: ATK, SPD, HP/DEF, 
-                    Wohlbefinden: Glück/CRIT
++ Attribute manipulieren:
+  + KH erhöht Angriffskraft/Angriffsgeschwindigkeit
+  + Eiweiß erhöht Angriffskraft/Angriffsgeschwindigkeit
+  + Fett erhöht DEF/HP
 
-Erhöhung der Attribute:
-
-genug Proteine erhöhen die ATK (Kraft)
-
-Kohlenhydrate erhöhen 
-
-Power - Up's: Vitamin C: schützt vor Erkältung -> In einem Regen-Level gibt es ein Schild was vor dem Regen schützt 
-              Energy - Drinks: Erhöhen Speed für das Level
-
-
-max KCAL, falls man drüber isst verliert man ein anderes Attribut
-
-
-
-
-
-
-
-
-
-genug eiweiss erhöht nach einem level die atk
-
-
-
-
-
-RPG Game
-
-
-Vitamin C: schützt vor Erkältung, falls man dann rausgeht und es regnet dann wird man erkältet
-           und muss wieder gesund werden
-
-Früchte: Gesunde Vitamine , aber zu viel gibt Zucker
-
-ATK, Speed, Defense,
-
-Power - Up's während Adventure
-
-Brainstorm:
-
-Energy Drinks macht dich für eine kurze Zeit schnell, aber verlangsamen dich danach ein wenig
-
-Schokolade -> Glücklich, aber viele kcal
-
++ Power - Up's: 
+  + Vitamin C: schützt vor Erkältung -> In einem Regen-Level gibt es ein Schild was vor dem Regen schützt 
+  + Energy - Drinks: Erhöhen Movementspeed für das Level
 
 

@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Enemy
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -13,12 +16,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - AttackCircle
+  - EnemyHitBox
+  - Ground
+  - PlayerHitBox
   - 
   - 
   - 
@@ -38,6 +41,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3890937027
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background Decorations
+    uniqueID: 3754627635
+    locked: 0
+  - name: Decorations
+    uniqueID: 3187113137
+    locked: 0
+  - name: Foreground
+    uniqueID: 583044187
+    locked: 0
+  - name: Enemy
+    uniqueID: 390412001
+    locked: 0
+  - name: Player
+    uniqueID: 642904035
+    locked: 0
+  - name: Particles
+    uniqueID: 986370723
     locked: 0
