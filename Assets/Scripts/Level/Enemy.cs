@@ -70,6 +70,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool("Dead", true);
         GetComponent<EnemyChaseScript>().enabled = false;
         disableObjectAndColliders();
+        Destroy(gameObject, 2f);
     }
 
     private void disableEnemyHealthBar()

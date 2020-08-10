@@ -13,7 +13,8 @@ public class RestController : MonoBehaviour
     public Image[] questProgressBar;
     public Text[] questReward;
 
-    private readonly string apiUrl = "http://localhost:5000/";
+    //private readonly string apiUrl = "http://localhost:5000/";
+    private readonly string apiUrl = "http://193.197.231.26/";
 
     private void Awake()
     {

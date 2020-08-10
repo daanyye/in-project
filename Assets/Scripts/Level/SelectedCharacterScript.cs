@@ -13,7 +13,6 @@ public class SelectedCharacterScript : MonoBehaviour
 
     void Awake()
     {
-        PlayerPrefs.SetString("selectedCharacter", "samurai");
         checkCharacterSelection();
     }
 

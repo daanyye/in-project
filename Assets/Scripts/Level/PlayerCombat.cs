@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
-        attackDamage = PlayerPrefs.GetInt("atkNumber");
+        attackDamage = PlayerPrefs.GetInt("attackDamagePoints");
     }
 
     void Update()
@@ -26,12 +26,6 @@ public class PlayerCombat : MonoBehaviour
                 attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
-        }
-
-        //debugging things
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            takeDamage(100);
         }
     }
 
@@ -50,17 +44,12 @@ public class PlayerCombat : MonoBehaviour
 
     public void takeDamage(int incomingDamage)
     {
-        GetComponent<Player>().currentHealth -= incomingDamage;
-        //GameObject damageTaken = Instantiate(floatingPoint, transform.position, Quaternion.identity);
-        //damageTaken.transform.GetChild(0).GetComponent<TextMesh>().text = "-" + damage;
-        //Instantiate(bloodEffect, transform.position, Quaternion.identity);
-        //FindObjectOfType<GameSoundEffectManager>().PlaySound("enemyHit");
+        float damageReduction = incomingDamage * (PlayerPrefs.GetFloat("damageReductionPercentage") / 100f);
+        GetComponent<Player>().currentHealth -= Mathf.Floor(incomingDamage - damageReduction);
         animator.SetTrigger("GotHit");
 
         if (GetComponent<Player>().currentHealth <= 0)
-        {
             die();
-        }
     }
 
     public void die()
@@ -72,9 +61,7 @@ public class PlayerCombat : MonoBehaviour
             disableComponentsAndSetDeadState();
         }
         else
-        {
             disableComponentsAndSetDeadState();
-        }
     }
 
     private void disableComponentsAndSetDeadState()

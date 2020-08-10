@@ -269,8 +269,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   attackDamage: 0
-  dashForce: 15
-  startDashTimer: 0.25
 --- !u!114 &425189428205407190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxSpeed: 7
-  m_JumpForce: 700
+  m_JumpForce: 800
   m_CrouchSpeed: 0.25
   m_AirControl: 1
   m_WhatIsGround:

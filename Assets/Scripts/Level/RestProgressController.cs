@@ -5,7 +5,8 @@ using UnityEngine.Networking;
 
 public class RestProgressController : MonoBehaviour
 {
-    private readonly string apiUrl = "http://localhost:5000/";
+    //private readonly string apiUrl = "http://localhost:5000/";
+    private readonly string apiUrl = "http://193.197.231.26/";
 
     public void startOverrideProgress(string level)
     {

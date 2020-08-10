@@ -157,7 +157,6 @@ public class AttributeScript : MonoBehaviour
                     return true;
                 return false;
             default:
-                Debug.Log("no attributeType was given as Parameter");
                 return false;
         }
     }

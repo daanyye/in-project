@@ -7,17 +7,22 @@ using UnityEngine.UI;
 
 public class LoginController : MonoBehaviour
 {
-    private readonly string apiUrl = "http://localhost:5000/";
+    private readonly string apiUrl = "http://193.197.231.26/";
+    //private readonly string apiUrl = "http://localhost:5000/";
     public TMP_InputField username;
     public TMP_InputField password;
     public GameObject loginInterface;
     public GameObject loadingProgress;
+    public GameObject loginError;
+    public GameObject somethingWentWrong;
     public Text loadingProgressText;
 
     private void Start()
     {
         loginInterface.SetActive(true);
         loadingProgress.SetActive(false);
+        loginError.SetActive(false);
+        somethingWentWrong.SetActive(false);
         loadingProgressText.text = "";
     }
 
@@ -26,6 +31,14 @@ public class LoginController : MonoBehaviour
         loginInterface.SetActive(false);
         loadingProgress.SetActive(true);
         StartCoroutine(requestLogin());
+    }
+
+    public void onGoBackClick()
+    {
+        loginInterface.SetActive(true);
+        loadingProgress.SetActive(false);
+        loginError.SetActive(false);
+        somethingWentWrong.SetActive(false);
     }
 
     private void resetAfterError()
@@ -37,7 +50,6 @@ public class LoginController : MonoBehaviour
 
     private IEnumerator requestLogin()
     {
-        loadingProgressText.text = "Authenticating...";
         string requestUrl = apiUrl + "game?";
         requestUrl += "username=" + username.text + "&password=" + password.text;
 
@@ -46,7 +58,7 @@ public class LoginController : MonoBehaviour
 
         if (loginRequest.isNetworkError || loginRequest.isHttpError)
         {
-            resetAfterError();
+            somethingWentWrong.SetActive(true);
             yield break;
         }
 
@@ -59,9 +71,10 @@ public class LoginController : MonoBehaviour
         }
         else
         {
-            resetAfterError();
+            loginError.SetActive(true);
             yield break;
         }
+        loadingProgressText.text = "Authenticating...";
     }
 
     private IEnumerator requestProcessFoodentries()
