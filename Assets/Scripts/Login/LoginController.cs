@@ -41,6 +41,11 @@ public class LoginController : MonoBehaviour
         somethingWentWrong.SetActive(false);
     }
 
+    public void onExitGameClick()
+    {
+        Application.Quit();
+    }
+
     private void resetAfterError()
     {
         loginInterface.SetActive(true);
